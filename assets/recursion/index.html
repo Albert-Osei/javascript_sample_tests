@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion</title>
+  </head>
+  <body>
+    <!-- <label for="text">Enter a number</label>
+    <input type="text" id="num-field" placeholder="0"/> -->
+
+    <script>
+      // Finding factorial of a number
+
+      function fact(x) {
+        if (x == 0) {
+          return 1;
+        } else {
+          return x * fact(x - 1);
+        }
+      }
+      fact(4);
+      console.log(fact(4));
+
+      // Replicating array elements
+
+      // function rep(x,n) {
+      //     let result = [];
+      //     if(x < 0) {
+      //         return null
+      //     } else {
+      //         return result.push(x)
+      //     }
+      // }
+
+      function replicate(x, n) {
+        if (x <= 0) {
+             return [];
+        } else {
+            return [n].concat(replicate(x - 1, n));
+        }; 
+      };
+      replicate(2, 6);
+      console.log(replicate(2, 6));
+
+
+
+
+      //   Finding the product of array
+
+      function productOfArray(arr) {
+        if (arr.length === 0) {
+             return 1;
+        } else {
+            return arr.shift() * productOfArray(arr);
+        };      
+      };
+      console.log(productOfArray([1,2,3]));
+      console.log(productOfArray([1,2,3,10]));
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+  </head>
+  <body>
+    <h1 id="rk"></h1>
+
+    <script>
+
+      // IsSame - VERY EASY
+
+      function bool(x, n) {
+        if (x === n) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(bool(2, "3"));
+
+      // LessThan100 - VERY EASY
+
+      function check(x, y) {
+        var add = x + y;
+        if (add < 100) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(check(80, 67));
+
+      // Equality check - VERY
+
+      function myfn(x, y) {
+        if (typeof x == typeof y) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(myfn(2, 70));
+
+      // Title string - EASY
+
+      function myfirst(sentence) {
+          return sentence.charAt(0) === sentence.charAt(0).toUpperCase()
+      }
+      console.log(myfirst('Never hesitate to practice'));
+
+
+
+      //   String COUNT - EASY
+
+      let r = '';
+      function strCount() {
+        var s = "Potato can make potato for potato";
+        var f = "potato";
+        var r = s.split(f).length - 1;
+        return r  
+      }
+      console.log('String count is:' + strCount());
+    
+
+      //   CONCATENATE VARIABLE - MEDIUM
+
+      var pin = [1, 2, 3];
+      var mini = [4, 5, 6];
+      var nim = [7, 8, 9];
+
+      function addingUp() {
+        const result = pin.concat(mini, nim);
+        return result;
+      }
+      console.log(addingUp());
+    </script>
+  </body>
+</html>

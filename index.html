@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONTRYJS</title>
+</head>
+<body>
+    <!-- Bubbling and Capturing -->
+    <div id="firstDiv" style="background-color: aqua; height: 100px; padding: 30px 20px;">
+      <div class="secondDiv" >
+          <p id="innerText" style="text-align: center; padding: 20px 10px; border: 2px solid red; background-color: #ffff;">Watch the space carefully</p>
+          <a id="anchor" style="text-align: center; background-color: #ffff; padding: 10px 10px; border: 2px solid green; width: 100%;">event propagation</a>
+      </div>
+    </div>
+
+
+
+    <!-- Get Attributes -->
+    <a href="https://www.w3schools.com" id="ancTag">Learn Web dev</a>
+    <a href="https://www.google.com" id="difTag">My dev project</a>
+
+
+    <!-- Set Attributes -->
+    <div>
+        <img id="main" src="" alt="" >
+    </div>
+    
+
+    <script>
+        // Bubbling and Capturing
+        let firstDiv = document.getElementById('firstDiv');
+        let secondDiv = document.getElementById('secondDiv');
+        let innerText =document.getElementById('innerText');
+        let anchor = document.getElementById('anchor');
+
+        
+        firstDiv.addEventListener('click', myFunc, false);
+        innerText.addEventListener('click', myFunc, true);
+        anchor.addEventListener('click', myFunc, true);
+
+        function myFunc() {
+            alert('You have clicked on:'+ this.tagName);
+            event.stopPropagation();
+        };
+
+        // Get Attributes
+        var ancTag = document.getElementById('ancTag');
+        var difTag = document.getElementById('difTag');
+
+        var demo = ancTag.getAttribute('href');
+        console.log(demo)
+
+        // Remove Attribute
+
+        // console.log(difTag);
+        difTag.removeAttribute('href')
+        console.log(difTag);
+
+      
+
+        
+
+        
+
+       
+
+
+
+
+    </script>
+</body>
+</html>
