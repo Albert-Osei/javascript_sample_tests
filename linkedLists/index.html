@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linked Lists</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1 id="showList"></h1>
+      <h3 id="showConsole"></h3>
+    </div>
+
+    <script>
+      let showList = document.getElementById("showList");
+      let showConsole = document.getElementById("showConsole");
+
+      showList.textContent = "Practice tests on JS Linked lists";
+      showConsole.textContent = "Inspect to view results in the console";
+
+      // Printing output of single-linked list
+
+      let list = {
+        value: 1,
+        next: {
+          value: 2,
+          next: {
+            value: 3,
+            next: {
+              value: 4,
+              next: null,
+            },
+          },
+        },
+      };
+
+      //Using the Loop solution
+
+      function printList(list) {
+        while (list) {
+          console.log("The loop output is:" + list.value);
+          list = list.next;
+        }
+      }
+      printList(list);
+
+      // Using the recursive solution
+
+      function displayList(list) {
+        console.log("Recursive output is:" + list.value);
+        if (list.next) {
+          displayList(list.next);
+        }
+      }
+      displayList(list);
+
+      //Displaying linked list in the reverse order
+
+      // Loop solution
+
+      function printReverseList(list) {
+        let arr = [];
+        let link = list;
+
+        while (link) {
+          arr.push(link.value);
+          link = link.next;
+        }
+
+        for (let i = arr.length - 1; i >= 0; i--) {
+          console.log("Reverse order for the loop is:" + arr[i]);
+        }
+      }
+      printReverseList(list);
+
+      // Recursion solution
+
+      function displayReverseList(list) {
+        if (list.next) {
+          displayReverseList(list.next);
+        }
+
+        console.log("The recursive reverse order is:" + list.value);
+      }
+      displayReverseList(list);
+    </script>
+  </body>
+</html>
