@@ -14,18 +14,21 @@
           <a id="anchor" style="text-align: center; background-color: #ffff; padding: 10px 10px; border: 2px solid green; width: 100%;">event propagation</a>
       </div>
     </div>
+    <br /> <br />
 
 
 
     <!-- Get Attributes -->
-    <a href="https://www.w3schools.com" id="ancTag">Learn Web dev</a>
-    <a href="https://www.google.com" id="difTag">My dev project</a>
+    <a href="https://www.w3schools.com" id="ancTag">Learn Web dev</a> <br /> <br />
+    <a href="https://www.google.com" id="difTag">My dev project</a> <br /> <br />
 
 
     <!-- Set Attributes -->
     <div>
         <img id="main" src="" alt="" >
     </div>
+
+    <div class="demonstrate"></div>
     
 
     <script>
@@ -57,6 +60,15 @@
         // console.log(difTag);
         difTag.removeAttribute('href')
         console.log(difTag);
+
+        // Set Attribute
+
+        let main = document.getElementById('main');
+        let demonstrate = document.getElementById('demonstrate');
+
+        main.setAttribute('src', 'assets/pizza.png');
+        demonstrate.appendChild(main);
+
 
       
 
